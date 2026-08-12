@@ -1,0 +1,10 @@
+{
+  "description": "An interactive platform for learning Arabic through gamified quizzes and structured levels, designed for students seeking to enhance their language skills.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
