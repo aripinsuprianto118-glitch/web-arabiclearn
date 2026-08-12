@@ -57,7 +57,9 @@ export default function Level2Page({ user, onNavigate, onLanguageChange, darkMod
   function handlePlayAudio() {
     setPlaying(true)
     if (audioRef.current) {
-      audioRef.current.src = q.audioFile
+      const src = new URL(`audio/${q.audioFile}`, import.meta.env.BASE_URL).href
+      audioRef.current.src = src
+      audioRef.current.load()
       audioRef.current.play().catch(() => {})
     }
     setTimeout(() => setPlaying(false), 2000)
