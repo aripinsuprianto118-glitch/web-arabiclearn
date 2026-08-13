@@ -188,7 +188,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'I drink water', id: 'Saya minum air', ar: 'أنا أشرب الماء' },
     correctOrder: ['أَنَا', 'أَشْرَبُ', 'الْمَاءَ'],
     distractors: ['يَأْكُلُ', 'هُوَ'],
-    audioFile: 'saya_minum_air.mp3',
+    audioFile: 'saya_minum_air.mpeg',
     fullSentence: 'أنا أشرب الماء',
   },
   {
@@ -196,7 +196,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'He reads a book', id: 'Dia membaca buku', ar: 'هو يقرأ الكتاب' },
     correctOrder: ['هُوَ', 'يَقْرَأُ', 'الْكِتَابَ'],
     distractors: ['أَنَا', 'يَكْتُبُ'],
-    audioFile: 'Dia_Membaca_Buku.mp3',
+    audioFile: 'Dia_Membaca_Buku.mpeg',
     fullSentence: 'هو يقرأ الكتاب',
   },
   {
@@ -204,7 +204,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'I go to school', id: 'Saya pergi ke sekolah', ar: 'أنا أذهب إلى المدرسة' },
     correctOrder: ['أَنَا', 'أَذْهَبُ', 'إِلَى', 'الْمَدْرَسَةِ'],
     distractors: ['هِيَ', 'الْبَيْتِ'],
-    audioFile: 'Saya_Pergi_Kesekolah.mp3',
+    audioFile: 'Saya_Pergi_Kesekolah.mpeg',
     fullSentence: 'أنا أذهب إلى المدرسة',
   },
   {
@@ -212,7 +212,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'This is a new book', id: 'Ini buku baru', ar: 'هذا كتاب جديد' },
     correctOrder: ['هَذَا', 'كِتَابٌ', 'جَدِيدٌ'],
     distractors: ['ذَلِكَ', 'قَدِيمٌ'],
-    audioFile: 'Ini_Buku_Baru.mp3',
+    audioFile: 'Ini_Buku_Baru.mpeg',
     fullSentence: 'هذا كتاب جديد',
   },
   {
@@ -220,7 +220,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'Where is the pen?', id: 'Di mana pulpen itu?', ar: 'أين القلم؟' },
     correctOrder: ['أَيْنَ', 'الْقَلَمُ', '؟'],
     distractors: ['مَا', 'الْكِتَابُ'],
-    audioFile: 'Dimana_Pulpen_Itu.mp3',
+    audioFile: 'Dimana_Pulpen_Itu.mpeg',
     fullSentence: 'أين القلم؟',
   },
   {
@@ -228,7 +228,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'I eat rice', id: 'Saya makan nasi', ar: 'أنا آكل الرز' },
     correctOrder: ['أَنَا', 'آكُلُ', 'الرُّزَّ'],
     distractors: ['أَشْرَبُ', 'هُوَ'],
-    audioFile: 'Saya_Makan_Nasi.mp3',
+    audioFile: 'Saya_Makan_Nasi.mpeg',
     fullSentence: 'أنا آكل الرز',
   },
   {
@@ -236,7 +236,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'She writes a letter', id: 'Dia (pr) menulis surat', ar: 'هي تكتب رسالة' },
     correctOrder: ['هِيَ', 'تَكْتُبُ', 'رِسَالَةً'],
     distractors: ['يَقْرَأُ', 'كِتَابًا'],
-    audioFile: 'Dia_Menulis_surat.mp3',
+    audioFile: 'Dia_Menulis_surat.mpeg',
     fullSentence: 'هي تكتب رسالة',
   },
   {
@@ -244,7 +244,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'The door is open', id: 'Pintu itu terbuka', ar: 'الباب مفتوح' },
     correctOrder: ['الْبَابُ', 'مَفْتُوحٌ'],
     distractors: ['النَّافِذَةُ', 'مُغْلَقٌ'],
-    audioFile: 'Pintu_itu_Terbuka.mp3',
+    audioFile: 'Pintu_itu_Terbuka.mpeg',
     fullSentence: 'الباب مفتوح',
   },
   {
@@ -252,7 +252,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'I learn Arabic', id: 'Saya belajar bahasa Arab', ar: 'أنا أتعلم اللغة العربية' },
     correctOrder: ['أَنَا', 'أَتَعَلَّمُ', 'اللُّغَةَ', 'الْعَرَبِيَّةَ'],
     distractors: ['هُوَ', 'الْفَرَنْسِيَّةَ'],
-    audioFile: 'Saya_Belajar_Bahasa_Arab.mp3',
+    audioFile: 'Saya_Belajar_Bahasa_Arab.mpeg',
     fullSentence: 'أنا أتعلم اللغة العربية',
   },
   {
@@ -260,7 +260,7 @@ export const sentenceQuestions: SentenceQuestion[] = [
     instruction: { en: 'The house is big', id: 'Rumah itu besar', ar: 'البيت كبير' },
     correctOrder: ['الْبَيْتُ', 'كَبِيرٌ'],
     distractors: ['الْمَدْرَسَةُ', 'صَغِيرٌ'],
-    audioFile: 'Rumah_Itu_Besar.mp3',
+    audioFile: 'Rumah_Itu_Besar.mpeg',
     fullSentence: 'البيت كبير',
   },
 ]

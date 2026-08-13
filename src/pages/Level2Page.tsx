@@ -57,10 +57,29 @@ export default function Level2Page({ user, onNavigate, onLanguageChange, darkMod
   function handlePlayAudio() {
     setPlaying(true)
     if (audioRef.current) {
-      const src = new URL(`audio/${q.audioFile}`, import.meta.env.BASE_URL).href
-      audioRef.current.src = src
-      audioRef.current.load()
-      audioRef.current.play().catch(() => {})
+      const audio = audioRef.current
+      // build src robustly: import.meta.env.BASE_URL may be empty or non-absolute
+      const base = import.meta.env.BASE_URL
+      let src: string
+      if (base && (base.startsWith('http://') || base.startsWith('https://'))) {
+        src = new URL(`audio/${q.audioFile}`, base).href
+      } else {
+        const b = base && base !== '/' ? base.replace(/\/$/, '') : ''
+        src = `${b}/audio/${q.audioFile}`.replace(/\/\/+/g, '/')
+      }
+      // ensure a <source> element with correct MIME is present (helps some servers/browsers)
+      let srcEl = audio.querySelector('source') as HTMLSourceElement | null
+      if (!srcEl) {
+        srcEl = document.createElement('source') as HTMLSourceElement
+        audio.appendChild(srcEl)
+      }
+      srcEl.src = src
+      srcEl.type = 'audio/mpeg'
+      audio.load()
+      audio.play().catch((err) => {
+        console.error('Audio play failed', err, src)
+      })
+      audio.onerror = (e) => console.error('Audio element error', e, src)
     }
     setTimeout(() => setPlaying(false), 2000)
   }
@@ -168,7 +187,7 @@ export default function Level2Page({ user, onNavigate, onLanguageChange, darkMod
   return (
     <div className={`min-h-screen ${bg} geometric-bg`}>
       <Header user={user} onNavigate={onNavigate} onLanguageChange={onLanguageChange} darkMode={darkMode} />
-      <audio ref={audioRef} />
+      <audio ref={audioRef} preload="auto" onError={(e) => console.error('Audio element error', e)} />
 
       <div className="pt-24 pb-16 px-4 max-w-2xl mx-auto">
         {/* Progress row */}
